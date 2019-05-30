@@ -15,7 +15,7 @@ def start(prompt)
                 cohort_question(prompt)
             when select_login
                 puts "\e[H\e[2J"
-                p "admin_login"
+                admin_login(prompt)
             when select_exit_now
                 puts "\e[H\e[2J"
                 quit_program
