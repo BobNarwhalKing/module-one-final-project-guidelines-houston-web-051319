@@ -27,31 +27,132 @@ def cohort_question(prompt)
             case cohort
             when cohort1
                 puts "\e[H\e[2J"
-                p 1
+                student_choices = studentname(1).map do |st| st.first_name end
+                one_student = prompt.select("choose student: ", student_choices)
+
+                student_obj =  Student.find_by(first_name: one_student)
+                puts  "#{student_obj.first_name} #{student_obj.last_name}"
+                puts "gender: #{student_obj.gender}"
+                puts "country: #{student_obj.country}"
+                puts "description: #{student_obj.description}" 
+                puts "favorite music: #{student_obj.fav_music}"
+                puts "favorite movie : #{student_obj.fav_movie}"
+                puts "languages : #{student_obj.languages}"
+                
+
+                
+                    
             when cohort2
                 puts "\e[H\e[2J"
-                p 2
+                student_choices = studentname(2).map do |st| st.first_name end
+                    one_student = prompt.select("choose student: ", student_choices)
+                    student_obj =  Student.find_by(first_name: one_student)
+                puts  "#{student_obj.first_name} #{student_obj.last_name}"
+                puts "gender: #{student_obj.gender}"
+                puts "country: #{student_obj.country}"
+                puts "description: #{student_obj.description}" 
+                puts "favorite music: #{student_obj.fav_music}"
+                puts "favorite movie : #{student_obj.fav_movie}"
+                puts "languages : #{student_obj.languages}"
+                
+                       
+
+            
+            
             when cohort3
-                puts "\e[H\e[2J"
-                p 3
+             puts "\e[H\e[2J"
+                student_choices = studentname(3).map do |st| st.first_name end
+                    one_student = prompt.select("choose student: ", student_choices)
+                    student_obj =  Student.find_by(first_name: one_student)
+                puts  "#{student_obj.first_name} #{student_obj.last_name}"
+                puts "gender: #{student_obj.gender}"
+                puts "country: #{student_obj.country}"
+                puts "description: #{student_obj.description}" 
+                puts "favorite music: #{student_obj.fav_music}"
+                puts "favorite movie : #{student_obj.fav_movie}"
+                puts "languages : #{student_obj.languages}"
+                
+            
             when cohort4
                 puts "\e[H\e[2J"
-                p 4
+                # student_choices = studentname(4).map do |st| st.first_name end
+                #     one_student = prompt.select("choose student: ", student_choices)
+                #     student_obj =  Student.find_by(first_name: one_student)
+                # puts  "#{student_obj.first_name} #{student_obj.last_name}"
+                # puts "gender: #{student_obj.gender}"
+                # puts "country: #{student_obj.country}"
+                # puts "description: #{student_obj.description}" 
+                # puts "favorite music: #{student_obj.fav_music}"
+                # puts "favorite movie : #{student_obj.fav_movie}"
+                # puts "languages : #{student_obj.languages}"
+                puts "no data"
+                
+
+            
             when cohort5
                 puts "\e[H\e[2J"
-                p 5
+                student_choices = studentname(5).map do |st| st.first_name end
+                    one_student = prompt.select("choose student: ", student_choices)
+                    student_obj =  Student.find_by(first_name: one_student)
+                puts  "#{student_obj.first_name} #{student_obj.last_name}"
+                puts "gender: #{student_obj.gender}"
+                puts "country: #{student_obj.country}"
+                puts "description: #{student_obj.description}" 
+                puts "favorite music: #{student_obj.fav_music}"
+                puts "favorite movie : #{student_obj.fav_movie}"
+                puts "languages : #{student_obj.languages}"
+                
+                
             when cohort6
                 puts "\e[H\e[2J"
-                p 6
+                student_choices = studentname(6).map do |st| st.first_name end
+                    one_student = prompt.select("choose student: ", student_choices)
+                    student_obj =  Student.find_by(first_name: one_student)
+                puts  "#{student_obj.first_name} #{student_obj.last_name}"
+                puts "gender: #{student_obj.gender}"
+                puts "country: #{student_obj.country}"
+                puts "description: #{student_obj.description}" 
+                puts "favorite music: #{student_obj.fav_music}"
+                puts "favorite movie : #{student_obj.fav_movie}"
+                puts "languages : #{student_obj.languages}"
+                
+                
             when cohort7
                 puts "\e[H\e[2J"
-                p 7
+                student_choices = studentname(7).map do |st| st.first_name end
+                    one_student = prompt.select("choose student: ", student_choices)
+                    student_obj =  Student.find_by(first_name: one_student)
+                    puts  "#{student_obj.first_name} #{student_obj.last_name}"
+                    puts "gender: #{student_obj.gender}"
+                    puts "country: #{student_obj.country}"
+                    puts "description: #{student_obj.description}" 
+                    puts "favorite music: #{student_obj.fav_music}"
+                    puts "favorite movie : #{student_obj.fav_movie}"
+                    puts "languages : #{student_obj.languages}"
+                    
+            
             when cohort8
                 puts "\e[H\e[2J"
-                p 8
+                student_choices = studentname(8).map do |st| st.first_name end
+                one_student = prompt.select("choose student: ", student_choices)
+                student_obj =  Student.find_by(first_name: one_student)
+                puts  "#{student_obj.first_name} #{student_obj.last_name}"
+                puts "gender: #{student_obj.gender}"
+                puts "country: #{student_obj.country}"
+                puts "description: #{student_obj.description}" 
+                puts "favorite music: #{student_obj.fav_music}"
+                puts "favorite movie : #{student_obj.fav_movie}"
+                puts "languages : #{student_obj.languages}"
+
+                
+                
+                
+
+
             when go_back
                 puts "\e[H\e[2J"
                 start(prompt)
             end
+
     end
 end
