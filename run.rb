@@ -2,7 +2,10 @@ require_relative './config/environment'
 # prompt.ask('password:', echo: false)
 
 prompt = TTY::Prompt.new
+puts "\e[H\e[2J"
 start(prompt)
+
+# prompt.select("Question", [options])
 # cohort_options = Cohort.all_names
 # p cohort_options
 

@@ -1,5 +1,6 @@
 class Student < ActiveRecord::Base
 
+    belongs_to :cohort
     def self.all_first_names
         self.all.map {|all_students| all_students.first_name}
     end
@@ -8,6 +9,13 @@ class Student < ActiveRecord::Base
         self.all.map {|all_students| all_students.last_name}
     end
 
+    def full_name
+        "#{self.first_name} #{self.last_name}"
+    end
+
+    def self.all_full_names
+        Student.all.full_name
+    end
     def self.all_cohort_ids
         self.all.map {|all_students| all_students.cohort_id}
     end

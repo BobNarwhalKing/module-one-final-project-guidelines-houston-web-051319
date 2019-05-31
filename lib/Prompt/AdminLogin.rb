@@ -2,9 +2,9 @@ def admin_login(prompt)
     select_info, select_login, select_exit_now = -1, -2, -3
     while true
         selection = prompt.ask('Please enter your password. If you would like to go back type exit.', echo: false)
-            if selection == "Passw0rd"
+            if selection == "P"
                 puts "\e[H\e[2J"
-                p "admin_menu"
+                admin_menu(prompt)
             elsif selection == "exit"
                 puts "\e[H\e[2J"
                 start(prompt)

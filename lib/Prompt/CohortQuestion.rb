@@ -27,28 +27,36 @@ def cohort_question(prompt)
             case cohort
             when cohort1
                 puts "\e[H\e[2J"
-                p 1
+                students = students_by_cohort("Houston-web-071618")
+                cohort_prompt(students, prompt)
             when cohort2
                 puts "\e[H\e[2J"
-                p 2
+                students = students_by_cohort("Houston-web-082718")
+                cohort_prompt(students, prompt)
             when cohort3
                 puts "\e[H\e[2J"
-                p 3
+                students = students_by_cohort("Houston-web-100818")
+                cohort_prompt(prompt, students)
             when cohort4
                 puts "\e[H\e[2J"
-                p 4
+                students = students_by_cohort("Houston-web-111918")
+                cohort_prompt(prompt, students)
             when cohort5
                 puts "\e[H\e[2J"
-                p 5
+                students = students_by_cohort("Houston-web-021819")
+                cohort_prompt(prompt, students)
             when cohort6
                 puts "\e[H\e[2J"
-                p 6
+                students = students_by_cohort("Houston-web-040119")
+                cohort_prompt(prompt, students)
             when cohort7
                 puts "\e[H\e[2J"
-                p 7
+                students = students_by_cohort("Houston-DS-042219")
+                cohort_prompt(prompt, students)
             when cohort8
                 puts "\e[H\e[2J"
-                p 8
+                students = students_by_cohort("Houston-web-051319")
+                cohort_prompt(prompt, students)
             when go_back
                 puts "\e[H\e[2J"
                 start(prompt)
