@@ -1,21 +1,17 @@
 def del_student (prompt)
     students = []
-    students << Student.all_full_names
+    students << Student.all_first_names
 
     while true
         students << "Go Back One"
-        students << "Exit"
         answer = prompt.select("Which student would you like to delete?", students)
         case answer
         when "Go Back One"
             puts "\e[H\e[2J"
-            cohort_question(prompt)
-        when "Exit"
-            puts "\e[H\e[2J"
-            start(prompt)
+            admin_menu(prompt)
         else
             puts "\e[H\e[2J"
-            answer.destroy
+            Student.where(first_name: answer).destroy_all
         end
     end
 end

@@ -15,7 +15,7 @@ cohorts.each do |cohorts|
     Cohort.create(cohort_name: cohorts)
 end
 
-data = CSV.read("./csv/FlatironStudentInfo.csv")
+data = CSV.read("./csv/FlatironStudentInfo2.csv")
 data.each do |data|
     arr = data
     var = arr[0]
