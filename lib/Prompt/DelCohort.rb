@@ -14,8 +14,8 @@ def del_cohort(prompt)
              else
                 puts "\e[H\e[2J"
                 var = Cohort.find_by(cohort_name: cohort)
-                Student.where(cohort_id: var.id).destroy_all
-                Cohort.where(cohort_name: cohort).destroy_all
+                #Student.where(cohort_id: var.id).destroy_all
+                Cohort.where(cohort_name: cohort).destroy
             end
     end
 end

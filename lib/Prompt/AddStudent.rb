@@ -1,5 +1,5 @@
 def add_student (prompt)
-    select_info, select_login, select_exit_now = -1, -2, -3
+    #select_info, select_login, select_exit_now = -1, -2, -3
     while true
         fname = prompt.ask('Students First Name:')
         lname = prompt.ask('Students Last Name:')

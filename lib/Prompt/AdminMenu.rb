@@ -2,7 +2,7 @@ def admin_menu (prompt)
 
     del_cohort, del_student, add_cohort, add_student, change_cohort, change_student, logout, select_exit_now = -1, -2, -3, -4, -5, -6, -7, -8
     
-    while true
+    #while true
         selection = prompt.select("What would you like to do today?", ["Delete a Cohort", "Delete a student", "Add a Cohort", "Add a Student", "Change a Cohort Information", "Change Student Information","Logout", "Exit"]) do |menu|
             menu.choice "Delete a Cohort", del_cohort
             menu.choice "Delete a student", del_student
@@ -40,5 +40,5 @@ def admin_menu (prompt)
                 puts "\e[H\e[2J"
                 quit_program
             end
-    end
+    #end
 end
